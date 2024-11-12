@@ -1,31 +1,31 @@
 <div class="header">
   <div class="title">
-    <div (click)="onBurgerClick()" class="burger-container">
-      @if (isOpen) {
-      <img class="burger" src="../../../assets/close.png" alt="" />
-      }@else {
-      <img class="burger" src="../../../assets/burger-bar.png" alt="" />
-      }
-    </div>
     @if(!isConnected) {
       <div class="buttons">
         <div class="left-buttons">
-          @for (item of boutonsHeader; track $index) {
-          @if (item.id < 4) {
-            <a
-            class="button {{ item.isDark ? 'b-2' : 'b-1' }}"
-            [routerLink]="item.url"
-            [style.color]="item.id === 2 ? 'blue' : item.id === 3 ? 'red' : 'white'"
-            >{{ item.name }}</a>
-          }
-          }
+            @for (item of boutonsHeader; track $index) {
+            @if (item.id < 5 && item.id > 0  ) {
+              <a
+              class="button"
+              [routerLink]="item.url"
+              [style.color]="item.id === 0 ? 'black' : item.id === 3 ? 'blue' : item.id === 4 ? 'red' : 'white'"
+              >{{ item.name }}</a>
+            }
+            @if (item.id == 0 ) {
+              <a
+              class="button"
+              [routerLink]="item.url"
+              [style.color]="'white'"
+              >{{ item.name }}</a>
+            }
+            }
         </div>
         <div class="right-buttons" style="float: right;">
           @for (item of boutonsHeader; track $index) {
-          @if (item.id >= 4) {
+          @if (item.id >= 5) {
             <a
-             class="button {{ item.isDark ? 'b-2' : 'b-1' }}"
-             [style.color]="item.id === 2 ? 'blue' : item.id === 3 ? 'red' : 'white'"
+             class="button"
+             [style.color]="'white'"
              >{{ item.name }}</a>
            }
            }

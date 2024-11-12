@@ -19,8 +19,6 @@
       cursor: pointer;
     }
     .burger-container {
-      height: 2vh;
-      width: 2vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -42,27 +40,21 @@
   .buttons {
     display: flex;
     justify-content: center; // Changed from flex-end to center
-    gap: 1rem;
-    padding-right: 3rem; // Réduction du padding-right
-    align-items: center;
+    gap: 35rem;
+    padding-left: 40rem; // Réduction du padding-right
+    align-items: left;
 
     .button {
       text-decoration: inherit;
       height: fit-content;
-      padding: 0.5rem;
+      padding: 0.75rem;
       border-radius: 20px;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
-      &.b-2 {
-        background-color: black;
-        color: white;
-      }
-      &.b-1 {
-        background-color: white;
-        color: black;
-      }
+      margin: 0 0.5rem; // Ajout de marge pour espacer chaque bouton de 1rem
+      background-color: black;
+      color: white;
     }
-  }
+    }
 
   .profile {
     display: flex;
