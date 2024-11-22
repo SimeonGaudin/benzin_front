@@ -63,6 +63,7 @@ export class InscriptionComponent {
   public inscription(): void {
     this.inscriptionForm.markAllAsTouched();
     if (this.inscriptionForm.valid) {
+      
       this.chargementEnCours = true;
       this.userService
         .createUser(this.inscriptionForm.value)
