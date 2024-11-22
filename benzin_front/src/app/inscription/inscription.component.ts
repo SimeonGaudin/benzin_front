@@ -37,7 +37,7 @@ export class InscriptionComponent {
 
   public chargementEnCours: boolean = false;
 
-  public inscriptionError: Error;
+  public inscriptionError!: Error;
 
   public allUsers: User[] = [];
 

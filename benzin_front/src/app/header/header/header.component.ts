@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
     {
       id: 3,
       name: 'Rouler',
-      url: ['/Inscription'],
+      url: ['/rouler'],
       isDark: true,
     },
     {
@@ -66,8 +66,8 @@ export class HeaderComponent implements OnInit {
     },
     {
       id: 7,
-      name: 'Connexion',
-      url: ['/connexion'],
+      name: 'Connexion/Inscription',
+      url: ['/inscription'],
       isDark: true,
     },
   ];

@@ -19,7 +19,7 @@ import { Router } from '@angular/router';
   styleUrl: './connexion.component.scss',
 })
 export class ConnexionComponent implements OnInit {
-  public succesInscription: InscriptionSuccess | null;
+  public succesInscription!: InscriptionSuccess | null;
 
   public loginForm: FormGroup;
 
