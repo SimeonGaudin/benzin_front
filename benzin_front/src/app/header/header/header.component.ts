@@ -66,7 +66,7 @@ export class HeaderComponent implements OnInit {
     },
     {
       id: 7,
-      name: 'Connexion/Inscription',
+      name: 'Inscription',
       url: ['/inscription'],
       isDark: true,
     },
