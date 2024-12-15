@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Log in</h1>
+  <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <h4>Email</h4>
+        <input type="email" id="email" formControlName="email" class="form-control">
+        <h4>Password</h4>
+        <input type="text" id="password" formControlName="password" class="form-control">
+    </div>
+    <div>
+      <button color="primary" type="submit">Log in</button>
+    </div>
+  </form>
+</div>

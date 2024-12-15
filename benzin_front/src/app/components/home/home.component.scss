@@ -1,0 +1,118 @@
+.container {
+  width: 100%;
+  position: relative;
+  left: 0;
+  padding: 0;
+}
+
+.container-title{
+  margin: 40px 0 20px 0;
+}
+
+.container-title h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.container-filters{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-filter, .price-filter, .date-filter {
+  margin: 0 20px;
+  flex: 1 1 0;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.search-filter label {
+  font-weight: bold;
+}
+
+.price-filter {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.price-filter label {
+  font-weight: bold;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+}
+
+.slider-container input[type="range"] {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+}
+
+.date-filter {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.date-filter label {
+  font-weight: bold;
+}
+
+.date-filter input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h2 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.card-body p {
+  margin: 5px 0;
+}

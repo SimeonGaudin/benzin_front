@@ -1,0 +1,42 @@
+<div class="container">
+  <carrousel></carrousel>
+
+  <div class="container-title">
+    <h1>Car List</h1>
+    <hr>
+  </div>
+
+  <div class="container-filters">
+    <div class="search-filter">
+      <label for="searchinput">Search :</label>
+      <input id="searchinput" type="text" [(ngModel)]="searchText" placeholder="Search by name" class="search-input">
+    </div>
+
+    <div class="price-filter">
+      <label for="priceRange">Price Range: {{ minPrice }} € - {{ maxPrice }} €</label>
+      <div class="slider-container">
+        <input type="range" id="minPrice" [(ngModel)]="minPrice" [min]="0" [max]="600000" step="100"
+          (input)="updateMaxPrice()">
+        <input type="range" id="maxPrice" [(ngModel)]="maxPrice" [min]="0" [max]="600000" step="100"
+          (input)="updateMinPrice()">
+      </div>
+    </div>
+
+    <div class="date-filter">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" [(ngModel)]="selectedDate">
+    </div>
+
+  </div>
+
+  <div class="card-list">
+    <div *ngFor="let car of filteredCars()" class="card">
+      <img [src]="car.picture" alt="{{ car.name }}">
+      <div class="card-body">
+        <h2>{{ car.name }}</h2>
+        <p><span style="text-decoration: underline;">Price:</span> {{ car.price }} €</p>
+        <p><span style="text-decoration: underline;">End in:</span> {{ getDaysLeft(car.date) }} days</p>
+      </div>
+    </div>
+  </div>
+</div>

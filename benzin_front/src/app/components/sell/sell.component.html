@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Sell a car</h1>
+  <form [formGroup]="sellForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <h4>Car name</h4>
+        <input type="text" id="name" formControlName="name" class="form-control">
+        <h4>Picture</h4>
+        <input type="text" id="picture" formControlName="picture" class="form-control">
+        <h4>Start price</h4>
+        <input type="number" id="price" formControlName="price" class="form-control">
+        <h4>End date</h4>
+        <input type="date" id="date" formControlName="date" class="form-control">
+    </div>
+    <div>
+      <button color="primary" type="submit">Sell</button>
+    </div>
+  </form>
+</div>

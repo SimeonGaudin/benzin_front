@@ -1,0 +1,47 @@
+<header>
+  <nav>
+    <div class="navbar">
+      <div class="container_text" (click)="home()">
+        <span (click)="home()">
+          BUY
+        </span>
+        <span (click)="sell()">
+          SELL
+        </span>
+      </div>
+      <div class="container_logo" (click)="home()">
+        <svg viewBox="0 0 30 40" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g fill="currentColor" fill-rule="evenodd">
+            <path
+              d="M14.1165233,0 C15.0920986,3.20920086 16.5644336,5.81789651 18.5335284,7.82608696 C24.2790801,13.6857144 29.8856077,19.3578314 29.9956588,24.3478261 C30.2187074,34.4614122 21.802273,40 14.9986975,40 C8.19512196,40 0.224784905,34.4614171 0.00173618038,24.3478261 C-0.110166474,19.2738779 5.20579733,13.7991717 10.5913322,7.82608696 C12.5468693,5.65720519 13.721933,3.04850954 14.1165233,0 Z M15.8809841,12.173913 C12.789516,13.6970958 12.5519063,18.77557 13.2336657,23.4782609 C13.9154252,28.1809518 17.1236484,29.49573 19.410742,30.4347826 C21.6978357,31.3738353 24.7053789,30.4347826 25.5878183,28.6956522 C26.4702578,26.9565217 27.3526973,25.2173913 26.4702578,22.6086957 C25.5878183,20 18.9724523,10.6507303 15.8809841,12.173913 Z">
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div *ngIf="user; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+          <div>
+            <div>
+              <span>
+                My account
+              </span>
+              <span (click)="logout()">
+                Log out
+              </span>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template #elseBlock>
+          <span (click)="signup()">
+            Sign up
+          </span>
+          <span (click)="signin()">
+            Log in
+          </span>
+        </ng-template>
+      </div>
+    </div>
+  </nav>
+</header>
